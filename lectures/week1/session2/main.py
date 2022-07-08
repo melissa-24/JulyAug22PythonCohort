@@ -172,6 +172,7 @@ for pet in thePets:
 
 for c in trainingSchool: # looping through entire list of school classes
     print("#8a:", c['className']) # printing the class names
+    print("#8a:", c['className'],c['trainer'])
     for trainer in c['trainer']: # looping through all the trainers in each class
         print("#8b:", trainer) # printing the trainer object
 
