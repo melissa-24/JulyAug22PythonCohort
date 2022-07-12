@@ -142,9 +142,3 @@ trainingSchool = [
         ]
     }
 ]
-# print(trainingSchool)
-# print(trainingSchool[0])
-# print(trainingSchool[0]['className'])
-# print(trainingSchool[0]['trainer'])
-print(trainingSchool[0]['trainer']['firstName'])
-print(trainingSchool[0]['trainer']['skills'][0]['skillName'])

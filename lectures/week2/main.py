@@ -9,7 +9,7 @@ def keyValue(list): # creating function passing in a list to be named during act
     for i in range(0, len(list)): # looping through the whole list
         output = "" # creating var output setting to empty string so that it can hold info to follow
         for key,val in list[i].items(): # for each key & value in the list of items do the following (items() are refering to the items inside the dict)
-            output += f" {key} - {val}," # change the value of output to equal the key - value
+            output += f"{key} - {val}," # change the value of output to equal the key - value
         print("Printing output of each index:",output) # print output at end of each loop
 
 keyValue(pets) # activates function
@@ -18,3 +18,18 @@ keyValue(pets) # activates function
 
 
 # The output += means that we add the current value to what was already there... not overwrite it but add to it.  If we just put = then it would over write.  Since we want the collection of eggs to grow we have to add the + in there other wise it's like getting a new basket for each nest.
+
+
+def keyValue2(list): # creating function passing in a list to be named during activation
+    for i in range(0, len(list)): # looping through the whole list
+        output = f"name - {list[i]['name']}, breed - {list[i]['breed']}" # creating a var to contain what we want to print in this case an f string containing the manualy coded key and looped index'd value
+        print("Printing output of each index:", output) # print output at end of each loop
+
+keyValue2(pets) # activates function
+
+# list[i]['name'] = the value of the key name
+print(pets[0]) # This will print the whole index
+print(pets[0]['name']) # This will print the value of the chosen key
+
+print(pets)
+print(pets[0])
