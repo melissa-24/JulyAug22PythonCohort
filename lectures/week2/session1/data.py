@@ -26,7 +26,6 @@ trainingSchool = [
                 "gender": "Male",
                 "age": 7,
                 "owner": {
-                    id: 1,
                     "firstName": "Melissa",
                     "lastName": "Longenberger"
                 }
