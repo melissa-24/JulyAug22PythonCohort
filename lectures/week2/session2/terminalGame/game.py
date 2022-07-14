@@ -6,6 +6,7 @@ from misc.functions import *
 from misc.messages import *
 from classes.player import *
 from classes.numGame import *
+from classes.petsGame import *
 
 playerInput = str(input(welcome))
 player = Player(playerInput)
@@ -33,6 +34,8 @@ while playing:
                 numGame = GuessTheNumber()
                 numGame.start()
             elif gameList[0] == '2':
+                petsGame = PetsGame()
+                petsGame.start()
                 message = print("Game under construction\n\nExiting Now")
                 playing = False
             else:

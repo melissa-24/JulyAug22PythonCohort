@@ -1,11 +1,14 @@
 import random
-from .player import *
-from .pet import *
+from classes.player import *
+from classes.pet import *
 from .trick import *
 
 class PetsGame:
     def __init__(self):
         self.leave = 0
+
+
+
 
 
 
@@ -15,4 +18,10 @@ class PetsGame:
         pet = Pet(petInput)
         game = True
         while game:
-            tricks()
+            if pet.hunger == 100:
+                self.leave = 1
+                if self.leave == 1:
+                    game = False
+            else:
+                message = print("Game still testing")
+                game = False
