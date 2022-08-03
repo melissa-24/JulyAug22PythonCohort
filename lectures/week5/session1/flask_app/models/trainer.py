@@ -12,6 +12,9 @@ class Trainer:
         self.updatedAt = data['updatedAt']
         self.user_id = data['user_id']
 
+    def fullName(self):
+        return f'{self.firstName} {self.lastName}'
+
     @classmethod
     def getAll(cls):
         query = 'SELECT * FROM trainer;'
@@ -19,6 +22,7 @@ class Trainer:
         trainers = []
         for row in results:
             trainers.append(cls(row))
+        print('model all trainers:', trainers)
         return trainers
 
     @classmethod

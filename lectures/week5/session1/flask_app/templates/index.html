@@ -15,7 +15,19 @@
         </nav>
     </header>
     <main>
-
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+            {% for trainer in trainers %}
+                <tr>
+                    <td>{{trainer.fullName()}}</td>
+                    <td><button><a href="/trainer/{{trainer.id}}/view/">View</a></button> | <button><a href="/trainer/{{trainer.id}}/edit/">Edit</a></button> | <button><a href="/trainer/{{trainer.id}}/delete/">Delete</a></button></td>
+                </tr>
+            {% endfor %}
+        </table>
+        <button><a href="/addTrainer/">Add Trainer</a></button>
     </main>
     <footer>
 
