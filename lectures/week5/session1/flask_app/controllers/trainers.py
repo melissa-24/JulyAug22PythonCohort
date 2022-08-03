@@ -42,7 +42,8 @@ def editTrainer(trainer_id):
 @app.route('/trainer/<int:trainer_id>/update/', methods=['post'])
 def updateTrainer(trainer_id):
     data = {
-        'id': trainer_id,
+        # 'id': trainer_id,
+        'id': request.form['id'],
         'firstName': request.form['firstName'],
         'lastName': request.form['lastName'],
         'bio': request.form['bio']
