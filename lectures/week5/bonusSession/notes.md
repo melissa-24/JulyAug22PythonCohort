@@ -1,4 +1,5 @@
 # Bonus Lecture
+- [YouTube Link](https://youtu.be/O_xbTZ7G2vI)
 
 ## Step 1 Build ERD
 Table #1 = member
