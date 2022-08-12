@@ -77,8 +77,8 @@ def editCohort(cohort_id):
 @app.route('/cohort/<int:cohort_id>/update/', methods=['post'])
 def updateCohort(cohort_id):
     data = {
-        # 'id': cohort_id,
-        'id': request.form['id'],
+        'id': cohort_id,
+        # 'id': request.form['id'],
         'name': request.form['name'],
         'topic': request.form['topic'],
         'length': request.form['length'],
