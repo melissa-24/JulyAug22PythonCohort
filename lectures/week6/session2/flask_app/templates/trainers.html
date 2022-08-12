@@ -13,6 +13,7 @@
         <h2>Welcome {{user.fullName()}}</h2>
         <nav>
             {% block menu %} {% include 'menu.html' %} {% endblock menu %}
+            <a href="/users/">Users</a>
         </nav>
     </header>
     <div class="messages">

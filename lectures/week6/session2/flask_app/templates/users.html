@@ -9,8 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>All Cohorts</h1>
-        <h2>Welcome {{user.fullName()}}</h2>
+        <h1>All Users</h1>
         <nav>
             {% block menu %} {% include 'menu.html' %} {% endblock menu %}
         </nav>
@@ -27,27 +26,34 @@
     <main>
         <table>
             <tr>
-                <th>Class Name</th>
-                <th>Trainer</th>
-                <th>Topic/Skill</th>
+                <th>User</th>
+                <th>Access</th>
                 <th>Actions</th>
             </tr>
-            {% for cohort in cohorts %}
+            {% for user in users %}
                 <tr>
-                    <td>{{cohort.name}}</td>
+                    <td>{{user.fullName()}}</td>
                     <td>
-                        {% for trainer in trainers %}
-                            {% if cohort.trainer_id == trainer.id %}
-                                {{trainer.firstName}}
-                            {% endif %}
-                        {% endfor %}
+                        {% if user.access == '9' %}
+                            Employee
+                        {% else %}
+                            Customer
+                        {% endif %}
                     </td>
-                    <td>{{cohort.topic}}</td>
-                    <td><button><a href="/cohort/{{cohort.id}}/view/">View</a></button> | <button><a href="/cohort/{{cohort.id}}/edit/">Edit</a></button> | <button><a href="/cohort/{{cohort.id}}/delete/">Delete</a></button></td>
+                    <td>
+                        {% if user.access == '9' %}
+                            <form action="/user/{{user.id}}/makeCustomer" method="post">
+                                <button>Make Customer</button>
+                            </form>
+                        {% else %}
+                            <form action="/user/{{user.id}}/makeEmployee" method="post">
+                                <button>Make Employee</button>
+                            </form>
+                        {% endif %}
+                    </td>
                 </tr>
             {% endfor %}
         </table>
-        <button><a href="/addCohort/">Add Cohort</a></button>
     </main>
     <footer>
 

@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <h1>About {{trainer.firstName}}</h1>
+        <h1>Add Pet</h1>
         <nav>
             {% block menu %} {% include 'menu.html' %} {% endblock menu %}
         </nav>
@@ -24,20 +24,22 @@
         {% endwith %}
     </div>
     <main>
-        <div class="row">
-            <div class="column">
-                <h2>Name: {{trainer.firstName}} {{trainer.lastName}}</h2>
-                <h3>Bio: {{trainer.bio}}</h3>
-            </div>
-            <div class="column">
-                <h2>Classes {{trainer.fullName()}} Teaches:</h2>
-                <ul>
-                    {% for cohort in cohorts.cohorts %}
-                        <li>{{cohort.name}}</li>
-                    {% endfor %}
-                </ul>
-            </div>
-        </div>
+        <form action="/createPet/" method="post">
+            <section>
+                <label for="name">Pet Name</label>
+                <input type="text" name="name" id="">
+            </section>
+            <section>
+                <label for="age">Age</label>
+                <input type="text" name="age" id="">
+            </section>
+            <section>
+                <label for="breed">Breed</label>
+                <input type="text" name="breed" id="">
+            </section>
+            <input type="hidden" name="user_id" vale="{{user.id}}">
+            <button>Add Pet</button>
+        </form>
     </main>
     <footer>
 

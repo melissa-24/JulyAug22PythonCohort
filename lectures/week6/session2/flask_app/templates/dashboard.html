@@ -32,15 +32,17 @@
                 <th>Species/Breed</th>
                 <th>Actions</th>
             </tr>
-            {% for pet in pets %}
+            <!-- pets.pets means 1st pets = what we called the var on the controller and 2nd pets = the list of pets in the User class -->
+            {% for pet in pets.pets %}
                 <tr>
-                    <td>{{pet.pet.name}}</td>
-                    <td>{{pet.pet.age}}</td>
-                    <td>{{pet.pet.breed}}</td>
+                    <td>{{pet.name}}</td>
+                    <td>{{pet.age}}</td>
+                    <td>{{pet.breed}}</td>
                     <td></td>
                 </tr>
             {% endfor %}
         </table>
+        <button><a href="/addPet/">Add a Pet</a></button>
         <h2>Classes enrolled</h2>
         <table>
             <tr>
@@ -49,6 +51,7 @@
                 <th>Trainer</th>
                 <th>Start Date</th>
             </tr>
+            <!-- Here we need to specify the class when calling each part -->
             {% for class in classes %}
                 <tr>
                     <td>{{class.pet.name}}</td>
@@ -58,6 +61,7 @@
                 </tr>
             {% endfor %}
         </table>
+        <button><a href="/enrollPet/">Enroll in a Class</a></button>
     </main>
     <footer>
 

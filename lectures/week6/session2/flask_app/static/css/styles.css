@@ -37,3 +37,27 @@ body main {
   align-items: center;
   justify-content: center;
 }
+body main .row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+  padding: 1em;
+}
+body main .row form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+  padding: 1em;
+}
+body main .row .column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+  padding: 1em;
+}

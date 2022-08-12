@@ -1,4 +1,5 @@
 from flask_app.config.mysqlconnection import connectToMySQL
+from flask_app.models import pet
 
 class Cohort:
     db = 'pet_training'
@@ -10,6 +11,7 @@ class Cohort:
         self.createdAt = data['createdAt']
         self.updatedAt = data['updatedAt']
         self.trainer_id = data['trainer_id']
+        self.pets = []
 
     @classmethod
     def getAll(cls):
@@ -46,4 +48,18 @@ class Cohort:
     @classmethod
     def cohortPets(cls, data):
         # join statement showing all the pets in the cohort
-        return
+        query = 'SELECT * FROM  cohort LEFT JOIN pet on cohort.id = pet.cohort_id WHERE id = %(id)s;'
+        results = connectToMySQL(cls.db).query_db(query, data)
+        cohort = cls(results[0])
+        for row in results:
+            petData = {
+                'id': row['pet.id'],
+                'name': row['name'],
+                'age': row['age'],
+                'breed': row['breed'],
+                'createdAt': row['pet.createdAt'],
+                'updatedAt': row['pet.updatedAt'],
+                'user_id': row['user_id']
+            }
+            cohort.pets.append(pet.Pet(petData))
+        return cohort

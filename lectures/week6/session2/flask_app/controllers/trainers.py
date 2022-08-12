@@ -41,7 +41,8 @@ def viewTrainer(trainer_id):
             'id': trainer_id
         }
         theTrainer = Trainer.getOne(data)
-        return render_template('viewTrainer.html', trainer=theTrainer, user=theUser)
+        theCohorts = Trainer.trainerCohorts(data)
+        return render_template('viewTrainer.html', trainer=theTrainer, user=theUser, cohorts=theCohorts)
 
 @app.route('/trainer/<int:trainer_id>/edit/')
 def editTrainer(trainer_id):
