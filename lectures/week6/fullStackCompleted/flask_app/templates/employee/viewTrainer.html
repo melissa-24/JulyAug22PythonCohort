@@ -33,6 +33,8 @@
             <div class="column">
                 <h2>Classes {{trainer.fullName()}} Teaches:</h2>
                 <ul>
+                    <!-- cohort.cohorts == 1st cohorts is the controller file trainers.py var 2nd cohorts is the list in the model file trainer.py -->
+                    <!-- this is a 1:many join statement -->
                     {% for cohort in cohorts.cohorts %}
                         <li><a href="/cohort/{{cohort.id}}/view/">{{cohort.name}}</a></li>
                     {% endfor %}

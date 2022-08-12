@@ -20,8 +20,8 @@ class User:
         self.access = data['access']
         self.createdAt = data['createdAt']
         self.updatedAt = data['updatedAt']
-        self.pets = []
-        self.pet = None
+        self.pets = [] # This format is typically used for a single left join
+        self.pet = None # This format is typically used for multiple join's
         self.enroll = None
         self.cohort = None
         self.trainer = None
@@ -42,6 +42,7 @@ class User:
         if len(results) < 1:
             return False
         return cls(results[0])
+        # Query always returns a list cause it doesn't know that there is only ever going to be 1 result per id we need to pull out of the list the results thus the cls(results[0])
 
     @classmethod
     def getEmail(cls, data):

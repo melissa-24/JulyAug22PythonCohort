@@ -33,7 +33,13 @@
             {% for trainer in trainers %}
                 <tr>
                     <td>{{trainer.fullName()}}</td>
-                    <td><button><a href="/trainer/{{trainer.id}}/view/">View</a></button> | <button><a href="/trainer/{{trainer.id}}/edit/">Edit</a></button> | <button><a href="/trainer/{{trainer.id}}/delete/">Delete</a></button></td>
+                    <td>
+                        {% if user.id == trainer.user_id %}
+                            <button><a href="/trainer/{{trainer.id}}/view/">View</a></button> | <button><a href="/trainer/{{trainer.id}}/edit/">Edit</a></button> | <button><a href="/trainer/{{trainer.id}}/delete/">Delete</a></button>
+                        {% else %}
+                            <button><a href="/trainer/{{trainer.id}}/view/">View</a></button>
+                        {% endif %}
+                    </td>
                 </tr>
             {% endfor %}
         </table>
