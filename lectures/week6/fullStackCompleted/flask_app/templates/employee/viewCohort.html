@@ -40,6 +40,8 @@
                 {% if user.access == '9' %}
                     <h2>Pets Enrolled:</h2>
                     <ul>
+                        <!-- This is a many:many join statement -->
+                        <!-- pet.pet.name == pet coming from the controller file var 2nd pet = the self.pet in the model file -->
                         {% for pet in pets %}
                             <li>{{pet.pet.name}}</li>
                         {% endfor %}
