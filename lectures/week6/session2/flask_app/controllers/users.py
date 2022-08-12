@@ -72,8 +72,11 @@ def dashboard():
         thePets = User.ownerPets(data)
         theClasses = User.ownerPetClasses(data)
         theUser = User.getOne(data)
+        if theUser.access == '9':
+            print(theUser.access)
+            return render_template('trainers.html', user=theUser, trainers=theTrainers)
         if theUser.id == 1:
-            if theUser.access == 9:
+            if theUser.access == '9':
                 print(theUser.access)
                 return render_template('trainers.html', user=theUser, trainers=theTrainers)
             else:
@@ -82,9 +85,6 @@ def dashboard():
                 print(theUser.access)
                 flash("User access updated to Employee")
                 return render_template('trainers.html', user=theUser, trainers=theTrainers)
-        elif theUser.access == 9:
-            print(theUser.access)
-            return render_template('trainers.html', user=theUser, trainers=theTrainers)
         else:
             print(theUser.access)
             return render_template('dashboard.html', user=theUser, pets=thePets, classes=theClasses)
