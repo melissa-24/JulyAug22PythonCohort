@@ -26,6 +26,7 @@ def index():
 @app.route('/madLib01/')
 def madLib01():
     nounRand01 = random.choice(nouns)
+    nounRand02 = random.choice(nouns)
     nounPlurRand01 = random.choice(nounPlurals)
     verbRand01 = random.choice(verbs)
     verbingRand01 = random.choice(verbings)
@@ -51,9 +52,9 @@ def madLib02():
     nounRand02 = random.choice(nouns)
     nounRand03 = random.choice(nouns)
     nounRand04 = random.choice(nouns)
-    verbRand01 = random.choice(verbs)
-    verbRand02 = random.choice(verbs)
-    verbRand03 = random.choice(verbs)
+    verbingRand01 = random.choice(verbs)
+    verbingRand02 = random.choice(verbs)
+    verbingRand03 = random.choice(verbs)
     return render_template('lib02.html', food01=foodRand01, food02=foodRand02, food03=foodRand03, name=nameRand01, adjective=adjectRand01, noun01=nounRand01, noun02=nounRand02, noun03=nounRand03, noun04=nounRand04, verb01=verbingRand01, verb02=verbingRand02, verb03=verbingRand03)
 
 @app.route('/madLib03/')
