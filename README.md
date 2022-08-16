@@ -28,7 +28,7 @@
 - [Session 2 - Lecture - Flask w/MySQL](https://github.com/Python-InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week4/session2/lecture)
 
 ## Week 5 - Flask & Bonus Full Flask w/o Validations
-- [Session 1 - Flask](https://github).com/Python-InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week5/session1)
+- [Session 1 - Flask](https://github.com/Python-InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week5/session1)
 - [Session 2 - Full Flask w/o Validations](https://github.com/Python-InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week5/session2)
 - [Bonus Session - Full Flask w/o Validations - Bucket List](https://github.com/Python-InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week5/bonusSession)
 
@@ -37,7 +37,7 @@
 InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week6/session1/officeHour)
 - [Session 1 - Lecture - CommentNotes App w/Validations](https://github.com/Python-InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week6/session1/lecture)
 - [Session 2 - Full Stack App](https://github.com/Python-InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week6/session2)
-- [Full Stack App w/Many to Many]{https://github.com/Python-InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week6/fullStackCompleted)
+- [Full Stack App w/Many to Many](https://github.com/Python-InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week6/fullStackCompleted)
 - [MadLib App](https://github.com/Python-InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week6/MadLib)
 - [Belt Demo](https://github.com/Python-InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week6/BeltDemo)
 
