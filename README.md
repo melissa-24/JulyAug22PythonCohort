@@ -42,7 +42,9 @@ InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week6/session1/office
 - [Belt Demo](https://github.com/Python-InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week6/BeltDemo)
 
 ## Week 7
--
+- [Session 1 - Bonus Code Hour](https://github.com/Python-InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week7/session1/cookieOrderValidations)
+- [Session 1 - Office Hour] (https://github.com/Python-InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week7/session1/officeHour)
+- [Session 1 - Lecture](https://github.com/Python-InstructorMelissa/JulyAug22PythonCohort/tree/main/lectures/week7/session1/lecture)
 
 ## Week 8
 -
